@@ -1,11 +1,20 @@
 [
   {
-    "id": "1759678019560",
+    "id": "hr-ops-manager-michigan",
     "title": "HR Operations Manager",
-    "location": "Hyderabad, India / Michigan, USA",
+    "location": "Michigan, USA",
+    "type": "Part-time",
+    "description": "About the Role:\nOrantis Global is seeking a detail-oriented and proactive HR Operations Manager to help manage day-to-day HR processes as we grow. This is a part-time role (3–4 hours/day) ideal for college students, fresh graduates, or early-career professionals looking to gain real-world experience.\n\nResponsibilities:\n• Manage new hire onboarding and offer letter documentation\n• Maintain employee records and respond to HR-related emails\n• Support day-to-day HR operations and coordination tasks\n• Communicate with candidates and internal teams effectively\n\nRequirements:\n• Excellent written and verbal communication skills\n• Organized and responsive to emails and deadlines\n• Based in Michigan, USA\n• Open to beginners and college students\n\nWhat We Offer:\n• Flexible remote/hybrid work arrangement\n• Real-world HR experience in a growing consulting firm\n• Opportunity to work with a global team\n• Part-time hours that fit student schedules\n\nType: Part-time (3–4 hours/day)\nLocation: Michigan, USA (Remote/Hybrid)",
+    "createdAt": "2025-10-05T18:45:00.000Z",
+    "active": true
+  },
+  {
+    "id": "us-it-consultant-hyderabad",
+    "title": "US IT Consultant",
+    "location": "Hyderabad, India",
     "type": "Full-time",
-    "description": "About the role\nWe are seeking an HR Operations Manager to support our new IT consulting business. You will build and run core HR operations and hiring processes, partner with delivery leads, and keep candidates and clients informed.\n\nRequirements\n- 2+ years experience in US IT recruiting/operations\n- Excellent spoken and written communication with US clients\n- Comfortable multitasking in a fast-paced, early-stage environment\n- Ability to manage end-to-end hiring operations (sourcing to onboarding)\n- Hands-on with tools (ATS/spreadsheets), documentation, and follow-ups\n\nNice to have\n- Experience coordinating with onsite/offshore teams\n- Familiarity with basic compliance and HR documentation\n\nLocations\n- Hyderabad, India / Michigan, USA (hybrid/flexible)",
-    "createdAt": "2025-10-05T15:26:59.560Z",
+    "description": "About the Role:\nWe are hiring a US IT Consultant to join our growing global consulting team. The ideal candidate will have experience (or strong interest) in US staffing, vendor management, and contracting (C2C, W2, sponsorships), and must be comfortable working during US business hours (9 AM – 5 PM ET).\n\nResponsibilities:\n• Coordinate with vendors and clients across the US\n• Screen candidate resumes and conduct initial conversations\n• Understand and handle different work authorizations (C2C, W2, OPT, H1B, etc.)\n• Manage multiple tasks, calls, and communications efficiently\n• Support end-to-end recruitment and vendor management processes\n\nRequirements:\n• Strong English communication (spoken & written)\n• Good understanding of US recruitment/staffing process\n• Ability to multitask and work independently\n• Based in India (Hyderabad preferred)\n• Must be available during US Eastern Time (9 AM – 5 PM)\n\nWhat We Offer:\n• Competitive salary and benefits\n• Work with US-based clients and cutting-edge technology projects\n• Professional growth in the IT consulting industry\n• Remote-first work environment\n• Opportunity to expand into a leadership role as we scale\n\nType: Full-time (Remote – India)\nLocation: Hyderabad, India (Remote)\nWorking Hours: US Eastern Time (9 AM – 5 PM ET)",
+    "createdAt": "2025-10-05T18:45:00.000Z",
     "active": true
   }
 ]
