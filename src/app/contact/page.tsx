@@ -27,13 +27,33 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setSubmitStatus('success')
-    setTimeout(() => {
-      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' })
-      setSubmitStatus('idle')
-    }, 3000)
+    setSubmitStatus('idle')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (!res.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setSubmitStatus('success')
+      setTimeout(() => {
+        setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' })
+        setSubmitStatus('idle')
+      }, 5000)
+    } catch (error) {
+      console.error('Contact form error:', error)
+      setSubmitStatus('error')
+      setTimeout(() => {
+        setSubmitStatus('idle')
+      }, 5000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -86,8 +106,14 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
                 
                 {submitStatus === 'success' && (
-                  <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                    Thank you for your message! We&apos;ll get back to you within 24 hours.
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-800 rounded-lg">
+                    ✓ Thank you for your message! We&apos;ll get back to you within 24 hours.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-800 rounded-lg">
+                    ✕ Failed to send message. Please try again or email us directly at contact@orantisglobal.com
                   </div>
                 )}
 
