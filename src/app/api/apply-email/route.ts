@@ -21,8 +21,10 @@ export async function POST(req: NextRequest) {
 
     const toEmail = process.env.APPLICATIONS_TO_EMAIL || 'contact@orantisglobal.com'
 
-    await resend.emails.send({
-      from: 'Orantis Global Careers <careers@orantisglobal.com>',
+    console.log('Sending email:', { toEmail, name, email, jobTitle })
+
+    const result = await resend.emails.send({
+      from: 'Orantis Global <onboarding@resend.dev>', // Use Resend's verified domain
       to: [toEmail],
       subject: `New Application: ${jobTitle} — ${name}`,
       text: `Job: ${jobTitle}\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
@@ -32,11 +34,14 @@ export async function POST(req: NextRequest) {
           content: base64,
         },
       ],
-      replyTo: email,
+      replyTo: email, // This allows you to reply directly to the applicant
     })
 
-    return NextResponse.json({ ok: true })
+    console.log('Email sent successfully:', result)
+
+    return NextResponse.json({ ok: true, result })
   } catch (e) {
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
+    console.error('Email send error:', e)
+    return NextResponse.json({ error: 'Failed to send email', details: e.message }, { status: 500 })
   }
 }
