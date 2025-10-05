@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   keywords: 'IT consulting, technology solutions, digital transformation, cloud migration, cybersecurity, software development, Orantis Global',
   authors: [{ name: 'Orantis Global' }],
   robots: 'index, follow',
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Orantis Global | Professional IT Consulting & Technology Solutions',
     description: 'Expert IT consulting services to transform your business with cutting-edge technology solutions.',
@@ -30,6 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/logo-orantis.svg" type="image/svg+xml" />
+      </head>
       <body className={inter.className}>
         {children}
       </body>

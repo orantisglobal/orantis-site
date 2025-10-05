@@ -84,3 +84,5 @@ html {
 body, html {
   cursor: default !important;
 }
+
+/* Logo images should follow component-defined sizes; avoid global overrides */

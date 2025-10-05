@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -35,14 +35,17 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center space-x-3">
-              <img 
-                src="/assets/logo.png" 
-                alt="Orantis Global" 
-                className="h-10 w-auto"
-              />
-              <span className="text-xl font-bold text-gray-900">Orantis Global</span>
-            </a>
+            <Link 
+              href="/" 
+              className="flex items-center min-w-[44px] min-h-[44px] group transition-opacity duration-200 hover:opacity-90"
+              aria-label="Orantis Global Home"
+            >
+              <div className="bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-2.5 rounded-lg shadow-md">
+                <span className="text-white font-bold text-xl sm:text-2xl tracking-wider lowercase" style={{fontFamily: 'Inter, system-ui, -apple-system, sans-serif', letterSpacing: '0.05em'}}>
+                  orantis global
+                </span>
+              </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

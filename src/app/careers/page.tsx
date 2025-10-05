@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 type Job = {
   id: string
@@ -52,8 +54,9 @@ export default function CareersPage() {
 
   return (
     <main className="min-h-screen">
+      <Header />
       {/* Hero */}
-      <section className="pt-20 pb-10 bg-gradient-to-br from-gray-50 to-white">
+      <section className="pt-32 pb-10 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">Join Orantis Global</h1>
@@ -131,6 +134,8 @@ export default function CareersPage() {
       {isApplying && selectedJob && (
         <ApplyModal job={selectedJob} onClose={() => setIsApplying(false)} />
       )}
+      
+      <Footer />
     </main>
   )
 }

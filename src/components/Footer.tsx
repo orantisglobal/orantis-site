@@ -66,14 +66,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/assets/logo.png" 
-                alt="Orantis Global" 
-                className="h-10 w-auto"
-              />
-              <span className="text-xl font-bold">Orantis Global</span>
-            </div>
+            <Link href="/" className="inline-block mb-6 transition-opacity duration-200 hover:opacity-90">
+              <div className="bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-2.5 rounded-lg shadow-md">
+                <span className="text-white font-bold text-2xl tracking-wider lowercase" style={{fontFamily: 'Inter, system-ui, -apple-system, sans-serif', letterSpacing: '0.05em'}}>
+                  orantis global
+                </span>
+              </div>
+            </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Transforming businesses through next-generation technology solutions. 
               We help companies leverage AI, cloud, and cutting-edge technology to drive growth, 

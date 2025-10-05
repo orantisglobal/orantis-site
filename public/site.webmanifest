@@ -1,0 +1,17 @@
+{
+  "name": "Orantis Global",
+  "short_name": "Orantis",
+  "description": "Expert IT consulting services for digital transformation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
+
