@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
           content: base64,
         },
       ],
-      reply_to: email,
+      replyTo: email,
     })
 
     return NextResponse.json({ ok: true })
